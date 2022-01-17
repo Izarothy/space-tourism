@@ -1,8 +1,13 @@
-// todo: menu
+// to do: animation on nav items hover
+// position hero button
+// destination a
+import { useState } from 'react';
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import HeroButton from '../components/HeroButton';
+import NavMenu from '../components/NavMenu';
 export default function Home() {
+  const [menuActive, setMenuActive] = useState(false);
   return (
     <div>
       <Head>
@@ -11,7 +16,8 @@ export default function Home() {
         <style></style>
       </Head>
       <div className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop h-screen bg-cover bg-norepeat bg-center text-white p-6">
-        <NavBar />
+        <NavMenu setMenuActive={setMenuActive} menuActive={menuActive} />
+        <NavBar setMenuActive={setMenuActive} menuActive={menuActive} />
         <main className="flex flex-col grid-4 justify-center text-center font-barlowCondensed mt-12">
           <span className="text-secondary uppercase ">
             So, you want to travel to
