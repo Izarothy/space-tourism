@@ -14,10 +14,10 @@ module.exports = {
         'home-tablet': "url('/assets/home/background-home-tablet.jpg')",
         'home-mobile': "url('/assets/home/background-home-mobile.jpg')",
       },
-    },
-    colors: {
-      main: '#0B0D17',
-      secondary: '#D0D6F9',
+      colors: {
+        main: '#0B0D17',
+        secondary: '#D0D6F9',
+      },
     },
   },
   plugins: [],
