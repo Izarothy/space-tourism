@@ -6,9 +6,9 @@ const PlanetsBarItem = ({ name, setCurrentDestination, destinationActive }) => {
       onClick={() => setCurrentDestination(name)}
       className={`${
         destinationActive
-          ? `md:border-b-[3px] border-white`
+          ? `border-b-[3px] border-white`
           : `md:hover:border-b-[3px] border-white/50`
-      } text-secondary font-barlowCondensed tracking-wider cursor-pointer`}
+      } text-secondary font-barlowCondensed tracking-wider cursor-pointer uppercase`}
     >
       {name}
     </button>

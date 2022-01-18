@@ -5,7 +5,7 @@ const NavMenu = ({ setMenuActive, menuActive }) => {
     <div
       className={`${
         menuActive ? `absolute` : `hidden`
-      } h-full flex flex-col gap-10 bg-white/5 backdrop-blur-[80px] w-2/3 right-0 -mt-6 p-8`}
+      } h-full flex flex-col gap-10 bg-white/5 backdrop-blur-[80px] w-2/3 right-0 -mt-6 p-8 z-[100]`}
     >
       <button className="self-end" onClick={() => setMenuActive(false)}>
         <svg
