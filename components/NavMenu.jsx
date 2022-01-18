@@ -1,4 +1,5 @@
 import React from 'react';
+import NavItem from './NavItem';
 const NavMenu = ({ setMenuActive, menuActive }) => {
   return (
     <div
@@ -23,26 +24,10 @@ const NavMenu = ({ setMenuActive, menuActive }) => {
         </svg>
       </button>
       <ul className="flex flex-col md:flex-row gap-4 ml-3 uppercase font-barlowCondensed tracking-wider">
-        <a href="#">
-          <li>
-            <span className="font-bold">00</span> home
-          </li>
-        </a>
-        <a href="#">
-          <li>
-            <span className="font-bold">01</span> destination
-          </li>
-        </a>
-        <a href="#">
-          <li>
-            <span className="font-bold">02</span> crew
-          </li>
-        </a>
-        <a href="#">
-          <li>
-            <span className="font-bold">03</span> technology
-          </li>
-        </a>
+        <NavItem number="00" name="home" />
+        <NavItem number="01" name="destination" />
+        <NavItem number="02" name="crew" />
+        <NavItem number="03" name="technology" />
       </ul>
     </div>
   );

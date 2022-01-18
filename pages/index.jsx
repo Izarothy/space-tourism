@@ -1,28 +1,34 @@
-// to do: animation on nav items hover
-// position hero button
 // destination a
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import HeroButton from '../components/HeroButton';
 import NavMenu from '../components/NavMenu';
 export default function Home() {
   const [menuActive, setMenuActive] = useState(false);
+  const [currentPage, setCurrentPage] = useState('');
+
+  useEffect(() => {
+    setCurrentPage('Home');
+  }, []);
   return (
     <div>
       <Head>
         <title>Space Tourism</title>
-        <meta charSet="utf-8" />
-        <style></style>
       </Head>
       <div className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop h-screen bg-cover bg-norepeat bg-center text-white p-6">
         <NavMenu setMenuActive={setMenuActive} menuActive={menuActive} />
-        <NavBar setMenuActive={setMenuActive} menuActive={menuActive} />
+        <NavBar
+          setMenuActive={setMenuActive}
+          menuActive={menuActive}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
         <main className="flex flex-col grid-4 justify-center text-center font-barlowCondensed mt-12">
-          <span className="text-secondary uppercase ">
+          <span className="text-secondary uppercase">
             So, you want to travel to
           </span>
-          <h1 className="uppercase font-bellefair text-[80px] ">Space</h1>
+          <h1 className="uppercase font-bellefair text-[80px]">Space</h1>
           <p className="text-secondary leading-[25px] text-[15px]">
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.

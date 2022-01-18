@@ -1,5 +1,6 @@
 import React from 'react';
-const NavBar = ({ setMenuActive, menuActive }) => {
+import NavItem from './NavItem';
+const NavBar = ({ setMenuActive, menuActive, currentPage, setCurrentPage }) => {
   return (
     <nav className="flex justify-between">
       <a href="#">
@@ -22,26 +23,18 @@ const NavBar = ({ setMenuActive, menuActive }) => {
         </div>
       </a>
       <ul className="hidden md:flex flex-row gap-4 ml-3 uppercase font-barlowCondensed tracking-wider">
-        <a href="#">
-          <li>
-            <span className="font-bold">00</span> home
-          </li>
-        </a>
-        <a href="#">
-          <li>
-            <span className="font-bold">01</span> destination
-          </li>
-        </a>
-        <a href="#">
-          <li>
-            <span className="font-bold">02</span> crew
-          </li>
-        </a>
-        <a href="#">
-          <li>
-            <span className="font-bold">03</span> technology
-          </li>
-        </a>
+        <NavItem number="00" name="home" active={currentPage === 'Home'} />
+        <NavItem
+          number="01"
+          name="destination"
+          active={currentPage === 'Destination'}
+        />
+        <NavItem number="02" name="crew" active={currentPage === 'Crew'} />
+        <NavItem
+          number="03"
+          name="technology"
+          active={currentPage === 'Technology'}
+        />
       </ul>
       <button
         onClick={() => {
