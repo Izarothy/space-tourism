@@ -1,9 +1,9 @@
 import React from 'react';
 import NavItem from './NavItem';
 import NavMenu from './NavMenu';
-const NavBar = ({ setMenuActive, menuActive, currentPage, setCurrentPage }) => {
+const NavBar = ({ setMenuActive, menuActive, currentPage }) => {
   return (
-    <nav className="flex justify-between">
+    <nav className="flex justify-between w-full">
       <NavMenu setMenuActive={setMenuActive} menuActive={menuActive} />
       <a href="#">
         <div className="grid bg-white h-10 w-10 rounded-full items-center">

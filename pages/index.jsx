@@ -1,5 +1,3 @@
-// dest b mobile
-// make more components from done code
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
@@ -17,7 +15,7 @@ export default function Home() {
       <Head>
         <title>Space Tourism</title>
       </Head>
-      <div className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop h-screen bg-cover bg-norepeat bg-center text-white p-6">
+      <div className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop min-h-screen bg-cover bg-norepeat bg-center text-white p-6">
         <NavBar
           setMenuActive={setMenuActive}
           menuActive={menuActive}

@@ -1,9 +1,16 @@
 import React from 'react';
+import data from '../data/data.json';
+const destinations = data.destinations;
 
-const PlanetsBarItem = ({ name, setCurrentDestination, destinationActive }) => {
+const PlanetsBarItem = ({
+  idx,
+  name,
+  setCurrentDestination,
+  destinationActive,
+}) => {
   return (
     <button
-      onClick={() => setCurrentDestination(name)}
+      onClick={() => setCurrentDestination(destinations[idx])}
       className={`${
         destinationActive
           ? `border-b-[3px] border-white`
