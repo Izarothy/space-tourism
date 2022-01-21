@@ -25,7 +25,7 @@ export default function destination() {
         <title>{currentPage}</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <div className="bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop min-h-screen bg-cover bg-norepeat bg-center text-white">
+      <div className="bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop min-h-screen bg-cover text-white">
         <NavBar
           setMenuActive={setMenuActive}
           menuActive={menuActive}

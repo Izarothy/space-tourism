@@ -28,11 +28,11 @@ export default function crew() {
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        <main className="p-6 pt-0 flex flex-col gap-8 items-center text-center">
+        <main className="px-6 flex flex-col gap-8 items-center text-center md:px-[155px]">
           <Header number={'02'} name="Meet your crew" />
-          <img src={currentCrew.images.png} className="w-1/3" />
-          <hr className="border-gray-700 -mt-8 w-full" />
-          <div className="flex gap-4">
+          <img src={currentCrew.images.png} className="md:w-2/3 md:order-4" />
+          <hr className="border-gray-700 -mt-8 w-full md:hidden" />
+          <div className="flex gap-4 md:order-3">
             {crewData.map((crew, idx) => {
               return (
                 <CrewChoiceButton
