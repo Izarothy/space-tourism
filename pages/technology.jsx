@@ -29,7 +29,7 @@ export default function crew() {
           setCurrentPage={setCurrentPage}
         />
         <Header number={'03'} name="Space launch 101" />
-        <div className="w-full h-1/3">
+        <div className="w-full h-1/3 mt-6">
           <Image
             src={currentTechnology.images?.landscape}
             alt={currentTechnology.name}

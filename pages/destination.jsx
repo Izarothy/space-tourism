@@ -31,7 +31,7 @@ export default function destination() {
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        <main className="p-6">
+        <main className="p-6 pt-0">
           <div className="flex flex-col items-center mt-6 gap-7">
             <Header number="01" name="Pick your destination" />
             <Image

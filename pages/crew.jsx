@@ -20,14 +20,14 @@ export default function crew() {
       <Head>
         <title>{currentPage}</title>
       </Head>
-      <div className="bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop min-h-screen bg-cover bg-norepeat bg-center text-white ">
+      <div className="bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop min-h-screen bg-cover bg-norepeat bg-center text-white">
         <NavBar
           setMenuActive={setMenuActive}
           menuActive={menuActive}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        <main className="p-6 flex flex-col gap-8 items-center text-center">
+        <main className="p-6 pt-0 flex flex-col gap-8 items-center text-center">
           <Header number={'02'} name="Meet your crew" />
           <img src={currentCrew.images.png} className="w-1/3" />
           <hr className="border-gray-700 -mt-8 w-full" />

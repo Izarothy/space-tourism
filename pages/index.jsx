@@ -22,7 +22,7 @@ export default function Home() {
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        <main className="flex flex-col grid-4 justify-center text-center font-barlowCondensed mt-6 p-6">
+        <main className="flex flex-col grid-4 justify-center text-center font-barlowCondensed mt-6 p-6 pt-0">
           <Header desc="So, you want to travel to" name="space" />
           <p className="text-secondary leading-[25px] text-[15px]">
             Let’s face it; if you want to go to space, you might as well
