@@ -20,6 +20,7 @@ export default function crew() {
     <div>
       <Head>
         <title>{currentPage}</title>
+        <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <div className="bg-technology-mobile md:bg-technology-tablet lg:bg-technology-desktop min-h-screen bg-cover bg-norepeat bg-center text-white flex flex-col items-center">
         <NavBar

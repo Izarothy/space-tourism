@@ -14,6 +14,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Space Tourism</title>
+        <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <div className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop min-h-screen bg-cover bg-norepeat bg-center text-white pb-[90px]">
         <NavBar

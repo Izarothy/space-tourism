@@ -23,6 +23,7 @@ export default function destination() {
     <div>
       <Head>
         <title>{currentPage}</title>
+        <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <div className="bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop min-h-screen bg-cover bg-norepeat bg-center text-white">
         <NavBar
@@ -34,13 +35,13 @@ export default function destination() {
         <main className="p-6 pt-0">
           <div className="flex flex-col items-center mt-6 gap-7">
             <Header number="01" name="Pick your destination" />
-            <Image
-              src={currentDestination.images?.png}
-              width={170}
-              height={170}
-              className="z-[1]"
-              alt={currentDestination.name}
-            />
+            <div className="w-[170px] h-[170px] md:w-[300px] md:h-[300px]">
+              <img
+                src={currentDestination.images?.png}
+                className=""
+                alt={currentDestination.name}
+              />
+            </div>
             <div className="flex gap-7 mb-5">
               {data.destinations.map((destination, idx) => {
                 return (
@@ -55,15 +56,15 @@ export default function destination() {
               })}
             </div>
           </div>
-          <main className="flex flex-col items-center text-center">
-            <h2 className="uppercase text-[56px] font-bellefair">
+          <main className="flex flex-col items-center text-center md:px-[100px]">
+            <h2 className="uppercase text-[56px] md:text-[80px] font-bellefair">
               {currentDestination.name}
             </h2>
-            <p className="text-secondary mb-8 font-barlowCondensed">
+            <p className="text-secondary mb-8 font-barlowCondensed md:leading-[28px]">
               {currentDestination.description}
             </p>
           </main>
-          <hr className="border-secondary" />
+          <hr className="border-[#383B4B]" />
           <DestinationDescription currentDestination={currentDestination} />
         </main>
       </div>

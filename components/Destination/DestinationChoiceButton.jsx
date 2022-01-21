@@ -15,7 +15,7 @@ const PlanetsBarItem = ({
         destinationActive
           ? `border-b-[3px] border-white`
           : `md:hover:border-b-[3px] border-white/50`
-      } text-secondary font-barlowCondensed tracking-wider cursor-pointer uppercase`}
+      } text-secondary font-barlowCondensed tracking-wider cursor-pointer uppercase md:pb-3`}
     >
       {name}
     </button>
