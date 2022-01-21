@@ -4,7 +4,7 @@ import NavMenu from './NavMenu';
 import Link from 'next/link';
 const NavBar = ({ setMenuActive, menuActive, currentPage }) => {
   return (
-    <nav className="flex justify-between w-full">
+    <nav className="flex justify-between w-full md:mb-[102px]">
       <NavMenu setMenuActive={setMenuActive} menuActive={menuActive} />
       <Link href="/">
         <div className="grid bg-white h-10 w-10 rounded-full items-center m-6">
@@ -25,7 +25,7 @@ const NavBar = ({ setMenuActive, menuActive, currentPage }) => {
           </svg>
         </div>
       </Link>
-      <ul className="hidden md:flex flex-row gap-4 ml-3 uppercase font-barlowCondensed tracking-wider">
+      <ul className="hidden md:flex flex-row gap-4 ml-3 uppercase font-barlowCondensed tracking-wider md:pt-10 md:px-12 md:bg-white/5 backdrop-blur-[82px] md:tracking-widest">
         <NavItem number="00" name="home" active={currentPage === 'Home'} />
         <NavItem
           number="01"
@@ -40,7 +40,7 @@ const NavBar = ({ setMenuActive, menuActive, currentPage }) => {
         />
       </ul>
       <button
-        className="p-6"
+        className="p-6 md:hidden"
         onClick={() => {
           setMenuActive(!menuActive);
         }}

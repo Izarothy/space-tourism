@@ -5,7 +5,7 @@ import HeroButton from '../components/Home/HeroButton';
 import Header from '../components/Header';
 export default function Home() {
   const [menuActive, setMenuActive] = useState(false);
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState('');
 
   useEffect(() => {
     setCurrentPage('Home');
@@ -15,14 +15,14 @@ export default function Home() {
       <Head>
         <title>Space Tourism</title>
       </Head>
-      <div className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop min-h-screen bg-cover bg-norepeat bg-center text-white">
+      <div className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop min-h-screen bg-cover bg-norepeat bg-center text-white pb-[90px]">
         <NavBar
           setMenuActive={setMenuActive}
           menuActive={menuActive}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        <main className="flex flex-col grid-4 justify-center text-center font-barlowCondensed mt-6 p-6 pt-0">
+        <main className="flex flex-col grid-4 justify-center text-center font-barlowCondensed mt-6 p-6 pt-0 md:px-[159px]">
           <Header desc="So, you want to travel to" name="space" />
           <p className="text-secondary leading-[25px] text-[15px]">
             Let’s face it; if you want to go to space, you might as well

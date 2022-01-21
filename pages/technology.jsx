@@ -9,7 +9,7 @@ import TechnologyDescription from '../components/Technology/TechnologyDescriptio
 import data from '../data/data.json';
 const technologyData = data.technology;
 export default function crew() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState('');
   const [menuActive, setMenuActive] = useState(false);
   const [currentTechnology, setCurrentTechnology] = useState(technologyData[0]);
   useEffect(() => {
@@ -44,6 +44,7 @@ export default function crew() {
               return (
                 <TechnologyChoiceButton
                   number={idx}
+                  key={idx}
                   technologyActive={technology === currentTechnology}
                   setCurrentTechnology={setCurrentTechnology}
                 />

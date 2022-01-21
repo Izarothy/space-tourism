@@ -10,11 +10,11 @@ const Header = ({ number, desc, name }) => {
       {number && (
         <span className="text-secondary text-white/25 font-bold">{number}</span>
       )}
-      <span className="text-secondary uppercase">{desc}</span>
+      <span className="text-secondary uppercase md:text-[20px]">{desc}</span>
       <h1
         className={`${
-          number ? ` ` : `text-[80px]`
-        } uppercase tracking-wider text-gray-300`}
+          number ? ` ` : `text-[80px] md:text-[150px]`
+        } font-bellefair uppercase tracking-wider text-gray-300`}
       >
         {name}
       </h1>

@@ -8,7 +8,7 @@ import CrewChoiceButton from '../components/Crew/CrewChoiceButton';
 import CrewDescription from '../components/Crew/CrewDescription';
 const crewData = data.crew;
 export default function crew() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState('');
   const [menuActive, setMenuActive] = useState(false);
   const [currentCrew, setCurrentCrew] = useState(crewData[0]);
   useEffect(() => {
@@ -19,6 +19,7 @@ export default function crew() {
     <div>
       <Head>
         <title>{currentPage}</title>
+        <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
       <div className="bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop min-h-screen bg-cover bg-norepeat bg-center text-white">
         <NavBar
@@ -36,7 +37,7 @@ export default function crew() {
               return (
                 <CrewChoiceButton
                   number={idx}
-                  idx={idx}
+                  key={idx}
                   crewButtonActive={crew === currentCrew}
                   setCurrentCrew={setCurrentCrew}
                 />

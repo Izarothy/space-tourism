@@ -11,7 +11,7 @@ const HeroButton = () => {
       <button
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="m-auto focus:none outline-none bg-white h-[150px] w-[150px] rounded-full uppercase font-bellefair text-main tracking-wider text-lg"
+        className="m-auto focus:none outline-none bg-white h-[150px] w-[150px] md:h-[242px] md:w-[242px] rounded-full uppercase font-bellefair text-main tracking-wider text-lg md:text-[32px]"
       >
         Explore
       </button>

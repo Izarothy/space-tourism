@@ -8,7 +8,7 @@ import data from '../data/data.json';
 import DestinationChoiceButton from '../components/Destination/DestinationChoiceButton';
 import DestinationDescription from '../components/Destination/DestinationDescription';
 export default function destination() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState('');
   const [menuActive, setMenuActive] = useState(false);
   // As default is moon (index 0)
   const [currentDestination, setCurrentDestination] = useState(
