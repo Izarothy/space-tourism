@@ -8,7 +8,7 @@ import TechnologyChoiceButton from '../components/Technology/TechnologyChoiceBut
 import TechnologyDescription from '../components/Technology/TechnologyDescription';
 import data from '../data/data.json';
 const technologyData = data.technology;
-export default function crew() {
+export default function Technology() {
   const [currentPage, setCurrentPage] = useState('');
   const [menuActive, setMenuActive] = useState(false);
   const [currentTechnology, setCurrentTechnology] = useState(technologyData[0]);

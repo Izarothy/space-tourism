@@ -7,7 +7,7 @@ import data from '../data/data.json';
 import CrewChoiceButton from '../components/Crew/CrewChoiceButton';
 import CrewDescription from '../components/Crew/CrewDescription';
 const crewData = data.crew;
-export default function crew() {
+export default function Crew() {
   const [currentPage, setCurrentPage] = useState('');
   const [menuActive, setMenuActive] = useState(false);
   const [currentCrew, setCurrentCrew] = useState(crewData[0]);
