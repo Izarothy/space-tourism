@@ -1,11 +1,12 @@
 import React from 'react';
 import NavItem from './NavItem';
 import NavMenu from './NavMenu';
+import Link from 'next/link';
 const NavBar = ({ setMenuActive, menuActive, currentPage }) => {
   return (
-    <nav className="flex justify-between w-full">
+    <nav className="flex justify-between w-full p-6">
       <NavMenu setMenuActive={setMenuActive} menuActive={menuActive} />
-      <a href="#">
+      <Link href="/">
         <div className="grid bg-white h-10 w-10 rounded-full items-center">
           <svg
             width="1"
@@ -23,7 +24,7 @@ const NavBar = ({ setMenuActive, menuActive, currentPage }) => {
             />
           </svg>
         </div>
-      </a>
+      </Link>
       <ul className="hidden md:flex flex-row gap-4 ml-3 uppercase font-barlowCondensed tracking-wider">
         <NavItem number="00" name="home" active={currentPage === 'Home'} />
         <NavItem

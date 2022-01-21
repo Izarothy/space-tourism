@@ -1,12 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import NavBar from '../components/NavBar';
+import NavBar from '../components/Navbar/NavBar';
 import Header from '../components/Header';
 import data from '../data/data.json';
-import CrewChoiceButton from '../components/CrewChoiceButton';
-import CrewDescription from '../components/CrewDescription';
+import CrewChoiceButton from '../components/Crew/CrewChoiceButton';
+import CrewDescription from '../components/Crew/CrewDescription';
 const crewData = data.crew;
 export default function crew() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -21,29 +20,31 @@ export default function crew() {
       <Head>
         <title>{currentPage}</title>
       </Head>
-      <div className="bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop min-h-screen bg-cover bg-norepeat bg-center text-white p-6 flex flex-col gap-8 items-center text-center">
+      <div className="bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop min-h-screen bg-cover bg-norepeat bg-center text-white ">
         <NavBar
           setMenuActive={setMenuActive}
           menuActive={menuActive}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        <Header number={'02'} name="Meet your crew" />
-        <img src={currentCrew.images.png} className="w-1/3" />
-        <hr className="border-gray-700 -mt-8 w-full" />
-        <div className="flex gap-4">
-          {crewData.map((crew, idx) => {
-            return (
-              <CrewChoiceButton
-                key={idx}
-                idx={idx}
-                crewButtonActive={crew === currentCrew}
-                setCurrentCrew={setCurrentCrew}
-              />
-            );
-          })}
-        </div>
-        <CrewDescription currentCrew={currentCrew} />
+        <main className="p-6 flex flex-col gap-8 items-center text-center">
+          <Header number={'02'} name="Meet your crew" />
+          <img src={currentCrew.images.png} className="w-1/3" />
+          <hr className="border-gray-700 -mt-8 w-full" />
+          <div className="flex gap-4">
+            {crewData.map((crew, idx) => {
+              return (
+                <CrewChoiceButton
+                  number={idx}
+                  idx={idx}
+                  crewButtonActive={crew === currentCrew}
+                  setCurrentCrew={setCurrentCrew}
+                />
+              );
+            })}
+          </div>
+          <CrewDescription currentCrew={currentCrew} />
+        </main>
       </div>
     </div>
   );
