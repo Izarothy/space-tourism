@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Header = ({ number, desc, name }) => {
+const Header = ({ number, desc, name, leftPad }) => {
   return (
     <header
-      className={`${
-        number ? `flex-row gap-2` : `flex-col`
-      } flex font-barlowCondensed md:mr-auto`}
+      className={`${number ? `flex-row gap-2` : `flex-col`} ${
+        leftPad && `md:pl-9`
+      } flex font-barlowCondensed md:mr-auto md:mb-12`}
     >
       {number && (
         <span className="text-secondary text-white/25 font-bold md:text-[20px]">

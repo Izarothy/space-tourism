@@ -7,11 +7,11 @@ const TechnologyDescription = ({ currentTechnology }) => {
         <span className="font-barlowCondensed text-[14px] tracking-wider text-secondary">
           The terminology...
         </span>
-        <h2 className="font-bellefair text-2xl mt-2 tracking-wider">
+        <h2 className="font-bellefair text-2xl mt-2 tracking-wider md:text-[40px] md:my-4">
           {currentTechnology.name}
         </h2>
       </div>
-      <p className="font-barlowCondensed text-secondary text-justify">
+      <p className="font-barlowCondensed text-secondary leading-slug">
         {currentTechnology.description}
       </p>
     </div>

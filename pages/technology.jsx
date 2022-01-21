@@ -29,7 +29,7 @@ export default function crew() {
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        <Header number={'03'} name="Space launch 101" />
+        <Header number={'03'} name="Space launch 101" leftPad={true} />
         <div className="w-full h-1/3 mt-6">
           <Image
             src={currentTechnology.images?.landscape}
@@ -39,8 +39,8 @@ export default function crew() {
             layout="responsive"
           />
         </div>
-        <main className="p-6 flex flex-col gap-8 items-center text-center">
-          <div className="flex gap-4">
+        <main className="p-6 flex flex-col gap-8 items-center text-center md:px-[155px] md:pb-[100px]">
+          <div className="flex gap-4 md:mt-14 md:mb-11">
             {technologyData.map((technology, idx) => {
               return (
                 <TechnologyChoiceButton
