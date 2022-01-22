@@ -30,7 +30,7 @@ export default function Technology() {
           setCurrentPage={setCurrentPage}
         />
         <Header number={'03'} name="Space launch 101" leftPad={true} />
-        <div className="w-full h-1/3 mt-6">
+        <div className="lg:hidden w-full h-1/3 mt-6">
           <Image
             src={currentTechnology.images?.landscape}
             alt={currentTechnology.name}
@@ -39,8 +39,8 @@ export default function Technology() {
             layout="responsive"
           />
         </div>
-        <main className="p-6 flex flex-col gap-8 items-center text-center md:px-[155px] md:pb-[100px]">
-          <div className="flex gap-4 md:mt-14 md:mb-11">
+        <main className="p-6 flex flex-col lg:flex-row  lg:w-full lg:justify-between gap-8 items-center text-center md:px-[155px] md:pb-[100px] lg:pr-0">
+          <div className="flex lg:flex-col lg:gap-8 gap-4 md:mt-14 md:mb-11">
             {technologyData.map((technology, idx) => {
               return (
                 <TechnologyChoiceButton
@@ -53,6 +53,11 @@ export default function Technology() {
             })}
           </div>
           <TechnologyDescription currentTechnology={currentTechnology} />
+          <img
+            src={currentTechnology.images?.portrait}
+            alt={currentTechnology.name}
+            className=""
+          />
         </main>
       </div>
     </div>

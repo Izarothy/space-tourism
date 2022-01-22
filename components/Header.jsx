@@ -4,7 +4,7 @@ const Header = ({ number, desc, name, leftPad }) => {
   return (
     <header
       className={`${number ? `flex-row gap-2` : `flex-col`} ${
-        leftPad && `md:pl-9`
+        leftPad && `md:pl-9 lg:pl-[155px]`
       } flex font-barlowCondensed md:mr-auto md:mb-12 lg:mb-0`}
     >
       {number && (
