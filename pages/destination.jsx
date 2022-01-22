@@ -25,7 +25,7 @@ export default function Destination() {
         <title>{currentPage}</title>
         <link rel="icon" href="/assets/favicon-32x32.png" />
       </Head>
-      <main className="bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop min-h-screen bg-cover text-white">
+      <div className="bg-destination-mobile md:bg-destination-tablet lg:bg-destination-desktop min-h-screen bg-cover text-white pb-14">
         <NavBar
           setMenuActive={setMenuActive}
           menuActive={menuActive}
@@ -65,7 +65,7 @@ export default function Destination() {
         </main>
         <hr className="border-[#383B4B]" />
         <DestinationDescription currentDestination={currentDestination} />
-      </main>
+      </div>
     </div>
   );
 }

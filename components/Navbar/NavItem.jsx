@@ -10,7 +10,10 @@ const NavItem = ({ number, name, active }) => {
             : `md:hover:border-b-[3px] border-white/50`
         } cursor-pointer text-sm sm:text-normal md:pb-10`}
       >
-        <span className="md:hidden font-bold text-1/2 ">{number}</span> {name}
+        <span className="md:hidden lg:inline-flex font-bold text-1/2 ">
+          {number}
+        </span>{' '}
+        {name}
       </li>
     </Link>
   );

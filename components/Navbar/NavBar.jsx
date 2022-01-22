@@ -6,12 +6,13 @@ const NavBar = ({ setMenuActive, menuActive, currentPage }) => {
   return (
     <nav className="flex justify-between w-full md:mb-[102px]">
       <NavMenu setMenuActive={setMenuActive} menuActive={menuActive} />
+      <hr className="hidden lg:block absolute top-[88px] left-[167px] w-1/3 border-white/25 z-[999]" />
       <Link href="/">
-        <div className="grid bg-white h-10 w-10 rounded-full items-center m-6">
+        <div className="grid bg-white h-10 w-10 rounded-full items-center m-6 lg:mt-16 lg:ml-10">
           <svg
             width="1"
             height="1"
-            className="w-10 h-10"
+            className="w-10 h-10 cursor-pointer"
             viewBox="0 0 48 48"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +26,7 @@ const NavBar = ({ setMenuActive, menuActive, currentPage }) => {
           </svg>
         </div>
       </Link>
-      <ul className="hidden md:flex flex-row gap-4 ml-3 uppercase font-barlowCondensed tracking-wider md:pt-10 md:px-12 md:bg-white/5 backdrop-blur-[82px] md:tracking-widest">
+      <ul className="hidden md:flex flex-row gap-4 ml-3 uppercase font-barlowCondensed tracking-wider md:pt-10 md:px-12 lg:mt-10 lg:justify-center lg:w-3/5 md:bg-white/5 backdrop-blur-[82px] md:tracking-widest z-[1]">
         <NavItem number="00" name="home" active={currentPage === 'Home'} />
         <NavItem
           number="01"
