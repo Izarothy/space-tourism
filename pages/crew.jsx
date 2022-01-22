@@ -30,21 +30,30 @@ export default function Crew() {
         />
         <main className="px-6 flex flex-col gap-8 items-center text-center md:px-[155px]">
           <Header number={'02'} name="Meet your crew" />
-          <img src={currentCrew.images.png} className="md:w-2/3 md:order-4" />
-          <hr className="border-gray-700 -mt-8 w-full md:hidden" />
-          <div className="flex gap-4 md:order-3">
-            {crewData.map((crew, idx) => {
-              return (
-                <CrewChoiceButton
-                  number={idx}
-                  key={idx}
-                  crewButtonActive={crew === currentCrew}
-                  setCurrentCrew={setCurrentCrew}
-                />
-              );
-            })}
+          <div className="lg:flex justify-between w-full self-start">
+            <div className="order-last">
+              <img
+                src={currentCrew.images.png}
+                className="md:w-2/3 ml-auto md:order-4 lg:w-4/5 lg:h-auto"
+              />
+              <hr className="border-gray-700 -mt-8 w-full md:hidden" />
+            </div>
+            <div className="lg:flex flex-col max-w-xl text-left gap-24">
+              <div className="flex gap-4 md:order-3">
+                {crewData.map((crew, idx) => {
+                  return (
+                    <CrewChoiceButton
+                      number={idx}
+                      key={idx}
+                      crewButtonActive={crew === currentCrew}
+                      setCurrentCrew={setCurrentCrew}
+                    />
+                  );
+                })}
+              </div>
+              <CrewDescription currentCrew={currentCrew} />
+            </div>
           </div>
-          <CrewDescription currentCrew={currentCrew} />
         </main>
       </div>
     </div>

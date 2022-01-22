@@ -7,7 +7,7 @@ const CrewChoiceButton = ({ number, crewButtonActive, setCurrentCrew }) => {
     <button
       className={`${
         crewButtonActive ? `bg-white` : `bg-white/20`
-      } h-[10px] w-[10px] rounded-full`}
+      } h-[10px] w-[10px] lg:h-[15px] lg:w-[15px] rounded-full`}
       onClick={() => {
         setCurrentCrew(crewData[number]);
       }}
