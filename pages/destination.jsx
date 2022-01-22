@@ -32,39 +32,21 @@ export default function Destination() {
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        <div className="flex flex-col items-center mt-6 gap-7 p-6 pt-0">
+        <div className="flex flex-col w-full items-center mt-6 gap-7 p-6 pt-0">
           <Header number="01" name="Pick your destination" />
-          <div className="w-[170px] h-[170px] md:w-[300px] md:h-[300px]">
-            <img
-              src={currentDestination.images?.png}
-              className=""
-              alt={currentDestination.name}
+          <div className="lg:flex gap-14 justify-between w-full mt-14 mx-14">
+            <div className="flex flex-col mx-auto lg:m-0 lg:flex-row lg:ml-16 w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[445px] lg:h-[445px]">
+              <img
+                src={currentDestination.images?.png}
+                alt={currentDestination.name}
+              />
+            </div>
+            <DestinationDescription
+              currentDestination={currentDestination}
+              setCurrentDestination={setCurrentDestination}
             />
           </div>
-          <div className="flex gap-7 mb-5">
-            {data.destinations.map((destination, idx) => {
-              return (
-                <DestinationChoiceButton
-                  key={idx}
-                  idx={idx}
-                  name={destination.name}
-                  setCurrentDestination={setCurrentDestination}
-                  destinationActive={currentDestination === destination}
-                />
-              );
-            })}
-          </div>
         </div>
-        <main className="flex flex-col items-center text-center md:px-[100px]">
-          <h2 className="uppercase text-[56px] md:text-[80px] font-bellefair">
-            {currentDestination.name}
-          </h2>
-          <p className="text-secondary mb-8 font-barlowCondensed md:leading-[28px]">
-            {currentDestination.description}
-          </p>
-        </main>
-        <hr className="border-[#383B4B]" />
-        <DestinationDescription currentDestination={currentDestination} />
       </div>
     </div>
   );

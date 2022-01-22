@@ -8,7 +8,7 @@ const Header = ({ number, desc, name, leftPad }) => {
       } flex font-barlowCondensed md:mr-auto md:mb-12 lg:mb-0`}
     >
       {number && (
-        <span className="text-secondary text-white/25 font-bold md:text-[20px]">
+        <span className="text-secondary text-white/25 font-bold md:text-[20px] lg:text-[28px]">
           {number}
         </span>
       )}
@@ -17,7 +17,9 @@ const Header = ({ number, desc, name, leftPad }) => {
       </span>
       <h1
         className={`${
-          number ? `md:text-[20px]` : `text-[80px] md:text-[150px]`
+          number
+            ? `md:text-[20px] lg:text-[28px]`
+            : `text-[80px] md:text-[150px]`
         } font-barlowCondensed uppercase tracking-wider text-gray-300`}
       >
         {name}
